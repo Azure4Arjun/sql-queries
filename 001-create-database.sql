@@ -13,7 +13,7 @@ GO
 -- make the login user the database owner
 IF NOT EXISTS (SELECT * FROM sys.database_principals WHERE name = N'demo_app_2019')
 BEGIN
-    CREATE USER demo_app_2019 FOR LOGIN demo_app
+    CREATE USER demo_app_2019 FOR LOGIN demo_app_2019
     EXEC sp_addrolemember N'db_owner', N'demo_app_2019'
 END;
 GO
